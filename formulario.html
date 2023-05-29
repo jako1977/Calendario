@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardar datos en Google Sheets</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .contenedor_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+  }
+  .contForm{
+    width: 50%;
+    padding: 10px;
+    /* text-align: center; */
+  }
+  h1 {
+    width: 100%;
+  }
+  .item_cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .item_cont div {
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  .item_inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  label {
+    width: 20%;
+  }
+  input {
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #7e7d7d;
+    border-radius: 6px;
+  }
+  select {
+    width: 80%;
+    padding: 5px 0;
+    margin: 5px;
+    background-color: transparent;
+    border: 1px solid #7e7d7d;
+    border-radius: 6px;
+    /*color: #1c341c;*/
+  }
+  @media screen and (max-width: 1020px) {
+    .contenedor_form {
+      flex-direction: row;
+    }
+    .contForm{
+      width: 100%;
+    }
+    .item_inputs{
+      flex-direction: column;
+      align-items: start;
+    }
+    input, select, label {
+      width: 100%;
+    }
+  }
+  </style>
+</head>
+<body>
+<div class="contenedor_form">
+  <div class="contForm">
+    <h1>Formulario</h1>
+    <form id="formulario" method="POST">
+    <div class="item_cont">
+      <div class="item_inputs">
+        <label for="evento">Evento:</label>
+        <input type="text" id="evento" name="evento" value="envio post" required>
+      </div>
+      <div class="item_inputs">
+        <label for="tipoEvento">Tipo de evento:</label>
+        <input type="text" id="tipoEvento" name="tipoEvento" value="prueba" required>
+      </div>
+      <div class="item_inputs">
+        <label for="color">Color:</label>
+        <!-- <input type="text" id="color" name="color" value="amarillo" required><br> -->
+        <select name="color" id="color" class="form-controll" required>
+        </select>
+      </div>
+    </div>
+
+    <div class="item_cont">
+      <div class="item_inputs">
+        <label for="repetir">Repetir:</label>
+        <input type="text" id="repetir" name="repetir" value="nada" required>
+      </div>
+      <div class="item_inputs">
+        <label for="alarma">Alarma:</label>
+        <input type="text" id="alarma" name="alarma" value="no" required>
+      </div>
+      <div class="item_inputs">
+        <label for="alarmaC">AlarmaC:</label>
+        <input type="text" id="alarmaC" name="alarmaC" value="nada" required>
+      </div>
+      <div class="item_inputs">
+        <label for="alarmaW">AlarmaW:</label>
+        <input type="text" id="alarmaW" name="alarmaW" value="0" required>
+      </div>
+      <div class="item_inputs">
+        <label for="alarmaH">AlarmaH:</label>
+        <input type="text" id="alarmaH" name="alarmaH" value="12" required>
+      </div>
+      <div class="item_inputs">
+        <label for="alarmaT">AlarmaT:</label>
+        <input type="text" id="alarmaT" name="alarmaT" value="0" required>
+      </div>
+    </div>
+
+    <div class="item_cont">
+      <div class="item_inputs">
+        <label for="fecha1">Fecha:</label>
+        <input type="date" id="fecha1" name="fecha1" value="">
+      </div>
+      <label for="fDia" hidden>Día:</label>
+      <input type="text" id="fDia" name="fDia" value="8" required hidden><br>
+
+      <label for="fMes" hidden>Mes:</label>
+      <input type="text" id="fMes" name="fMes" value="5" required hidden><br>
+
+      <label for="fYear" hidden>Año:</label>
+      <input type="text" id="fYear" name="fYear" value="2023" required hidden><br>
+
+      <label for="fecha" hidden>Fecha:</label>
+      <input type="text" id="fecha" name="fecha" value="" required hidden><br>
+    </div>
+
+    <div class="item_cont">
+      <button type="submit" class="guardar" id="guardar">Guardar</button>
+    </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+<script src="node_modules/moment/moment.js"></script>
+<script src="js/colores.js"></script>
+<script src="js/scriptForm.js"></script>
+
+</body>
+</html>
+

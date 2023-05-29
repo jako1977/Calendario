@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="contenedorDiv">
+    <div class="divEventos hidden">
+      <div class="calendar-header">Eventos</div>
+    </div>
+    <div class="calendar">
+      <div class="calendar-header">
+        <button class="prev-year-button">&lt;&lt;</button>
+        <button class="prev-month-button">&lt;</button>
+        <div class="calendar-header-text"></div>
+        <button class="next-month-button">&gt;</button>
+        <button class="next-year-button">&gt;&gt;</button>
+      </div>
+      <div class="calendar-semana"></div>
+      <div class="calendar-body"></div>
+    </div>
+  </div>
+    <dialog>
+      <div>
+            <h2>Welcome</h2>
+        <p>Welcome to this website!</p>
+        <footer>
+          <button id="closeBtn">Close</button>
+        </footer>
+      </div>
+    </dialog>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/xlsx.full.min.js"></script>
+<script src="node_modules/moment/moment.js"></script>
+<script src="js/colores.js"></script>
+<script src="js/appiScript.js"></script>
+<script src="js/main.js"></script>
+<!-- <script src="leerExcel.js"></script>
+<script src="leerGoogleDoc.js"></script> -->
+</body>
+</html>
