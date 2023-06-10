@@ -27,7 +27,8 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log("Formulario enviado con éxito"))
+    .then(() => console.log("Formulario enviado con éxito"),
+            limpiaInputs())
     .catch((error) => alert(error));
 };
 
@@ -44,4 +45,12 @@ function llenaSelect() {
     option.text = valor;
     select.appendChild(option);
   });
+}
+
+function limpiaInputs(){
+  document.getElementById("fDia").value ="";
+  document.getElementById("fMes").value ="";
+  document.getElementById("fYear").value ="";
+  document.getElementById("evento").value ="";
+  document.getElementById("tipoEvento").value ="";
 }
