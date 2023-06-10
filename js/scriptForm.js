@@ -53,4 +53,7 @@ function limpiaInputs(){
   document.getElementById("fYear").value ="";
   document.getElementById("evento").value ="";
   document.getElementById("tipoEvento").value ="";
+  document.getElementById("fecha").value = moment(new Date()).format(
+  "DD/MM/YYYY"
+);
 }
