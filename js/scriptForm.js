@@ -12,6 +12,13 @@ const handleSubmit = (event) => {
   let fecha = document.getElementById("fecha1").value;
   let fechaF = moment(fecha).format("DD/MM/YYYY");
   document.getElementById("fecha").value = fechaF.toString();
+  
+  let fechaSel = [];
+  fechaSel = fechaF.split("/");
+  document.getElementById("fDia").value = fechaSel[0];
+  document.getElementById("fMes").value = fechaSel[1];
+  document.getElementById("fYear").value = fechaSel[2];
+  
   const myForm = event.target;
   const formData = new FormData(myForm);
 
